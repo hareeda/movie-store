@@ -5,18 +5,19 @@
 <div class="container">
         <div class="row">
                 {% for i in movie_list %}
-                <div class="col-md-3">
-                        <div class="card" style="width: 18rem; height: 35rem;">
+                <div class="col-md-4">
+                        <div class="card mr-4" style="width: 18rem; height: 35rem;">
                                 <img class="card-img-top" src="{{i.img.url}}" alt="Card image cap" width= "200px" height= "200px">
                                 <div class="card-body" >
                                   <h5 class="card-title text-center">{{i.name}}</h5>
                                   <p style="color: rgb(139, 127, 127);" class="card-text text-justify">{{i.desc}}</p>
                                   <a href="{% url 'movapp:detail' i.id %}" class="btn btn-warning">More..</a>
                                 </div>
-                              </div>
+                        </div><br>s
                 </div>
                 {% endfor %}
-        </div>
+        </div><br>
 </div>
 
         {% endblock %}
+
